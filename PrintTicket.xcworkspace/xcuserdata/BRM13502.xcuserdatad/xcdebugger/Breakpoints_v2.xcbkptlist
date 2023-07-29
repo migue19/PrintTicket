@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "95707AA4-2EEC-4C3E-8B09-69F6FB9E86A1"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B360AD21-97D9-4EF4-8C55-A93061F6BE33"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PrintTicket/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "printTicket(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B360AD21-97D9-4EF4-8C55-A93061F6BE33 - b12cc4643c139955"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "404">
+               </Location>
+               <Location
+                  uuid = "B360AD21-97D9-4EF4-8C55-A93061F6BE33 - b12cc4643c139955"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "B360AD21-97D9-4EF4-8C55-A93061F6BE33 - ca357abd23ef7347"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Printer.PError&gt;) -&gt; () in PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "B360AD21-97D9-4EF4-8C55-A93061F6BE33 - b12cc4643c139d39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "3168">
+               </Location>
+               <Location
+                  uuid = "B360AD21-97D9-4EF4-8C55-A93061F6BE33 - b12cc4643c139d39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "3140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E267CF10-EA6F-4D7D-941B-ED3196426ED2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PrintTicket/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "printTicket(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E267CF10-EA6F-4D7D-941B-ED3196426ED2 - b12cc4643c139af2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "544">
+               </Location>
+               <Location
+                  uuid = "E267CF10-EA6F-4D7D-941B-ED3196426ED2 - b12cc4643c139a30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  uuid = "E267CF10-EA6F-4D7D-941B-ED3196426ED2 - b12cc4643c139d56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "3392">
+               </Location>
+               <Location
+                  uuid = "E267CF10-EA6F-4D7D-941B-ED3196426ED2 - b12cc4643c139d56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "3364">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED7DBE67-21B1-4284-934A-7F2E3FF4F0BF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PrintTicket/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "printTicket(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ED7DBE67-21B1-4284-934A-7F2E3FF4F0BF - b12cc4643c139a30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "736">
+               </Location>
+               <Location
+                  uuid = "ED7DBE67-21B1-4284-934A-7F2E3FF4F0BF - b12cc4643c139a6e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "756">
+               </Location>
+               <Location
+                  uuid = "ED7DBE67-21B1-4284-934A-7F2E3FF4F0BF - b12cc4643c139e94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "3572">
+               </Location>
+               <Location
+                  uuid = "ED7DBE67-21B1-4284-934A-7F2E3FF4F0BF - b12cc4643c139e94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrintTicket.ViewController.printTicket(Any) -&gt; ()"
+                  moduleName = "PrintTicket"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguelmexicanoherrera/Desktop/PrintTicket/PrintTicket/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "3544">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

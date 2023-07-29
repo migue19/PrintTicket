@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Necesito conectarme a la impresora</string>
 </dict>
 </plist>

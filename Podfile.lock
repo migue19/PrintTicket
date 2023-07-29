@@ -1,0 +1,22 @@
+PODS:
+  - Printer (4.1.0)
+
+DEPENDENCIES:
+  - Printer (from `https://github.com/KevinGong2013/Printer.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  Printer:
+    :branch: master
+    :git: https://github.com/KevinGong2013/Printer.git
+
+CHECKOUT OPTIONS:
+  Printer:
+    :commit: f077fec1df9f8451943e30725183f13106a0c104
+    :git: https://github.com/KevinGong2013/Printer.git
+
+SPEC CHECKSUMS:
+  Printer: c762f8704aaa80c2a793a5ebd6757db2c7428e5d
+
+PODFILE CHECKSUM: fb4639f80fea1b0b1bf0f802594363e806ed7ff1
+
+COCOAPODS: 1.11.3

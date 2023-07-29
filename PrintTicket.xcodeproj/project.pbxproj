@@ -13,6 +13,7 @@
 		1DDF14562A744CAF00811466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDF14542A744CAF00811466 /* Main.storyboard */; };
 		1DDF14582A744CB100811466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DDF14572A744CB100811466 /* Assets.xcassets */; };
 		1DDF145B2A744CB100811466 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDF14592A744CB100811466 /* LaunchScreen.storyboard */; };
+		E1557BA1D96222124BBBECD6 /* Pods_PrintTicket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08C705047C174136AA1522C /* Pods_PrintTicket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		1DDF14572A744CB100811466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DDF145A2A744CB100811466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DDF145C2A744CB100811466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635096FCDADDD1DBC1773CC0 /* Pods-PrintTicket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrintTicket.release.xcconfig"; path = "Target Support Files/Pods-PrintTicket/Pods-PrintTicket.release.xcconfig"; sourceTree = "<group>"; };
+		89C7F9A9FF9110755D885852 /* Pods-PrintTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrintTicket.debug.xcconfig"; path = "Target Support Files/Pods-PrintTicket/Pods-PrintTicket.debug.xcconfig"; sourceTree = "<group>"; };
+		D08C705047C174136AA1522C /* Pods_PrintTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrintTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1557BA1D96222124BBBECD6 /* Pods_PrintTicket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				1DDF144D2A744CAF00811466 /* PrintTicket */,
 				1DDF144C2A744CAF00811466 /* Products */,
+				BCBB3B2A71AD921E949962B2 /* Pods */,
+				850913E49093D6345E90FAE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = PrintTicket;
 			sourceTree = "<group>";
 		};
+		850913E49093D6345E90FAE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D08C705047C174136AA1522C /* Pods_PrintTicket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCBB3B2A71AD921E949962B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89C7F9A9FF9110755D885852 /* Pods-PrintTicket.debug.xcconfig */,
+				635096FCDADDD1DBC1773CC0 /* Pods-PrintTicket.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DDF145F2A744CB100811466 /* Build configuration list for PBXNativeTarget "PrintTicket" */;
 			buildPhases = (
+				41FA8182224A189A658FCC4E /* [CP] Check Pods Manifest.lock */,
 				1DDF14472A744CAF00811466 /* Sources */,
 				1DDF14482A744CAF00811466 /* Frameworks */,
 				1DDF14492A744CAF00811466 /* Resources */,
+				3C78AC84F1E32CF4D28A0EAB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C78AC84F1E32CF4D28A0EAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrintTicket/Pods-PrintTicket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrintTicket/Pods-PrintTicket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrintTicket/Pods-PrintTicket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41FA8182224A189A658FCC4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrintTicket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1DDF14472A744CAF00811466 /* Sources */ = {
@@ -282,12 +350,13 @@
 		};
 		1DDF14602A744CB100811466 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89C7F9A9FF9110755D885852 /* Pods-PrintTicket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 39M4SDFCNZ;
+				DEVELOPMENT_TEAM = MC2W678MVZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrintTicket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,7 +369,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mx.com.nut.PrintTicket;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nut.PrintTicket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -310,12 +379,13 @@
 		};
 		1DDF14612A744CB100811466 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 635096FCDADDD1DBC1773CC0 /* Pods-PrintTicket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 39M4SDFCNZ;
+				DEVELOPMENT_TEAM = MC2W678MVZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrintTicket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -328,7 +398,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mx.com.nut.PrintTicket;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nut.PrintTicket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
