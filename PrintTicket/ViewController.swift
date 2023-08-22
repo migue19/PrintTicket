@@ -76,6 +76,13 @@ class ViewController: UIViewController {
         var hours = discountTimeLeft / 3600 % 24
         let minutes = (discountTimeLeft % 3600) / 60
         //let seconds = (discountTimeLeft % 3600) % 60
+        /// despues de los 15 min se cobra por minuto transcurrido
+        if minutes > 15 {
+            
+        } else {
+            return 0
+        }
+        
         if minutes > 30 {
             hours += 1
         }
