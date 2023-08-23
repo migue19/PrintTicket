@@ -8,5 +8,6 @@ target 'PrintTicket' do
   # Pods for PrintTicket  
   # For latest release in cocoapods
   pod 'Printer', :git => 'https://github.com/KevinGong2013/Printer.git', :branch => 'master'
+  pod 'FirebaseCore', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :branch => 'master'
 
 end
