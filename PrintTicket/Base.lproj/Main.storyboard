@@ -17,30 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w8-LB-3NA">
-                                <rect key="frame" x="153.33333333333334" y="348.33333333333331" width="86.666666666666657" height="34.333333333333314"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Imprimir"/>
-                                <connections>
-                                    <action selector="printTicket:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3yh-Gz-bHx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we9-mk-yBq">
-                                <rect key="frame" x="149.33333333333334" y="274" width="94.333333333333343" height="34.333333333333314"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Conectar"/>
-                                <connections>
-                                    <action selector="connectToPrinter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dwr-m1-c7M"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qh-Zf-FhQ">
-                                <rect key="frame" x="149.66666666666666" y="422.66666666666669" width="94" height="34.333333333333314"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Escanear"/>
-                                <connections>
-                                    <action selector="ScanQR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIh-mD-DDG"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LVM-Ta-88j">
                                 <rect key="frame" x="87" y="143" width="219" height="31"/>
                                 <subviews>
@@ -52,6 +28,9 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="unB-bQ-3UA">
                                         <rect key="frame" x="85.666666666666657" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="changePlan:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hex-gh-Uln"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ilimitado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ri-90-duS">
                                         <rect key="frame" x="154.66666666666666" y="0.0" width="64.333333333333343" height="31"/>
@@ -61,21 +40,80 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio por hora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqU-n8-xP7">
+                                <rect key="frame" x="122.00000000000001" y="214" width="149.33333333333337" height="25.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hwO-eI-v4X">
+                                <rect key="frame" x="122" y="255.33333333333337" width="149" height="60"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMH-za-zl8">
+                                        <rect key="frame" x="0.0" y="14.666666666666657" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="blockPrice:" destination="BYZ-38-t0r" eventType="valueChanged" id="f2q-BB-fNX"/>
+                                        </connections>
+                                    </switch>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ho9-2q-Y9c">
+                                        <rect key="frame" x="69" y="0.0" width="80" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="da9-qY-u1M"/>
+                                            <constraint firstAttribute="height" constant="60" id="mxm-Xh-8Vl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we9-mk-yBq">
+                                <rect key="frame" x="149.33333333333334" y="355.33333333333331" width="94.333333333333343" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Conectar"/>
+                                <connections>
+                                    <action selector="connectToPrinter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dwr-m1-c7M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w8-LB-3NA">
+                                <rect key="frame" x="153.33333333333334" y="429.66666666666669" width="86.666666666666657" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Imprimir"/>
+                                <connections>
+                                    <action selector="printTicket:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3yh-Gz-bHx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qh-Zf-FhQ">
+                                <rect key="frame" x="149.66666666666666" y="503.99999999999994" width="94" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Escanear"/>
+                                <connections>
+                                    <action selector="ScanQR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIh-mD-DDG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="mqU-n8-xP7" firstAttribute="top" secondItem="LVM-Ta-88j" secondAttribute="bottom" constant="40" id="1SR-Ma-wfD"/>
+                            <constraint firstItem="mqU-n8-xP7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4bd-Ze-Ppb"/>
                             <constraint firstItem="5w8-LB-3NA" firstAttribute="top" secondItem="we9-mk-yBq" secondAttribute="bottom" constant="40" id="A8n-dO-sZj"/>
                             <constraint firstItem="7qh-Zf-FhQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FKS-I7-zW8"/>
                             <constraint firstItem="we9-mk-yBq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QAS-Vq-Mhu"/>
+                            <constraint firstItem="we9-mk-yBq" firstAttribute="top" secondItem="hwO-eI-v4X" secondAttribute="bottom" constant="40" id="UPL-G7-ksn"/>
+                            <constraint firstItem="hwO-eI-v4X" firstAttribute="top" secondItem="mqU-n8-xP7" secondAttribute="bottom" constant="16" id="Wmq-7u-Xrr"/>
                             <constraint firstItem="5w8-LB-3NA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZcF-QT-rZr"/>
                             <constraint firstItem="LVM-Ta-88j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="chB-Ja-bYs"/>
                             <constraint firstItem="7qh-Zf-FhQ" firstAttribute="top" secondItem="5w8-LB-3NA" secondAttribute="bottom" constant="40" id="gE4-8g-J5S"/>
                             <constraint firstItem="LVM-Ta-88j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="gHL-d8-kZ4"/>
-                            <constraint firstItem="we9-mk-yBq" firstAttribute="top" secondItem="LVM-Ta-88j" secondAttribute="bottom" constant="100" id="sEU-Vo-gD7"/>
+                            <constraint firstItem="hwO-eI-v4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qah-3V-ofO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yvK-Vj-KdW"/>
+                    <connections>
+                        <outlet property="blockPriceSwitch" destination="PMH-za-zl8" id="sZK-8b-0cZ"/>
+                        <outlet property="planSwitch" destination="unB-bQ-3UA" id="cWw-es-cd2"/>
+                        <outlet property="priceTxt" destination="ho9-2q-Y9c" id="8Eg-An-rN8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,7 +140,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="baN-nY-AIJ">
-                                <rect key="frame" x="41" y="99" width="82.666666666666671" height="20.333333333333329"/>
+                                <rect key="frame" x="41.000000000000007" y="99" width="82.666666666666686" height="20.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqN-3M-lLi">
                                         <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>

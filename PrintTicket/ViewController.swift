@@ -8,12 +8,26 @@
 import UIKit
 import Printer
 class ViewController: UIViewController {
+    @IBOutlet weak var blockPriceSwitch: UISwitch!
+    @IBOutlet weak var planSwitch: UISwitch!
+    @IBOutlet weak var priceTxt: UITextField!
     private let bluetoothPrinterManager = BluetoothPrinterManager()
     private let dummyPrinter = DummyPrinter()
     private let interactor = TicketInteractor()
     override func viewDidLoad() {
         super.viewDidLoad()
+        changePrice()
+        disablePrice()
     }
+    
+    func disablePrice() {
+        priceTxt.isEnabled = !blockPriceSwitch.isOn
+    }
+    
+    func changePrice() {
+        priceTxt.text = planSwitch.isOn ? "78" : "54"
+    }
+    
     @IBAction func printTicket(_ sender: Any) {
         guard let image = UIImage(named: "ic_logo") else {
             alert(message: "No se pudo cargar el logo")
@@ -52,6 +66,12 @@ class ViewController: UIViewController {
                 }
             }
         }
+    }
+    @IBAction func blockPrice(_ sender: Any) {
+        disablePrice()
+    }
+    @IBAction func changePlan(_ sender: Any) {
+        changePrice()
     }
     @IBAction func ScanQR(_ sender: Any) {
         let scanner = ScannerViewController()
