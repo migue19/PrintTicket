@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D929B962A9527FA000DA7D2 /* PrintTicketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D929B952A9527FA000DA7D2 /* PrintTicketTests.swift */; };
+		1D929B9D2A952A38000DA7D2 /* TicketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D929B9C2A952A38000DA7D2 /* TicketInteractor.swift */; };
 		1DDF144F2A744CAF00811466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF144E2A744CAF00811466 /* AppDelegate.swift */; };
 		1DDF14512A744CAF00811466 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF14502A744CAF00811466 /* SceneDelegate.swift */; };
 		1DDF14532A744CAF00811466 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDF14522A744CAF00811466 /* ViewController.swift */; };
@@ -21,7 +23,20 @@
 		F2C344682A7B2B7E00A6CB2D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C344672A7B2B7E00A6CB2D /* String.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1D929B972A9527FA000DA7D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DDF14432A744CAF00811466 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DDF144A2A744CAF00811466;
+			remoteInfo = PrintTicket;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1D929B932A9527FA000DA7D2 /* PrintTicketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrintTicketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D929B952A9527FA000DA7D2 /* PrintTicketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintTicketTests.swift; sourceTree = "<group>"; };
+		1D929B9C2A952A38000DA7D2 /* TicketInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketInteractor.swift; sourceTree = "<group>"; };
 		1DDF144B2A744CAF00811466 /* PrintTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DDF144E2A744CAF00811466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DDF14502A744CAF00811466 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1D929B902A9527FA000DA7D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DDF14482A744CAF00811466 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,10 +74,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D929B942A9527FA000DA7D2 /* PrintTicketTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D929B952A9527FA000DA7D2 /* PrintTicketTests.swift */,
+			);
+			path = PrintTicketTests;
+			sourceTree = "<group>";
+		};
 		1DDF14422A744CAF00811466 = {
 			isa = PBXGroup;
 			children = (
 				1DDF144D2A744CAF00811466 /* PrintTicket */,
+				1D929B942A9527FA000DA7D2 /* PrintTicketTests */,
 				1DDF144C2A744CAF00811466 /* Products */,
 				BCBB3B2A71AD921E949962B2 /* Pods */,
 				850913E49093D6345E90FAE0 /* Frameworks */,
@@ -66,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				1DDF144B2A744CAF00811466 /* PrintTicket.app */,
+				1D929B932A9527FA000DA7D2 /* PrintTicketTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +109,7 @@
 				1DDF144E2A744CAF00811466 /* AppDelegate.swift */,
 				1DDF14502A744CAF00811466 /* SceneDelegate.swift */,
 				1DDF14522A744CAF00811466 /* ViewController.swift */,
+				1D929B9C2A952A38000DA7D2 /* TicketInteractor.swift */,
 				F2C344612A7B15E900A6CB2D /* ScannerViewController.swift */,
 				F2C344632A7B1D4B00A6CB2D /* ResultViewController.swift */,
 				1DDF14542A744CAF00811466 /* Main.storyboard */,
@@ -117,6 +150,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1D929B922A9527FA000DA7D2 /* PrintTicketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D929B9B2A9527FA000DA7D2 /* Build configuration list for PBXNativeTarget "PrintTicketTests" */;
+			buildPhases = (
+				1D929B8F2A9527FA000DA7D2 /* Sources */,
+				1D929B902A9527FA000DA7D2 /* Frameworks */,
+				1D929B912A9527FA000DA7D2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D929B982A9527FA000DA7D2 /* PBXTargetDependency */,
+			);
+			name = PrintTicketTests;
+			productName = PrintTicketTests;
+			productReference = 1D929B932A9527FA000DA7D2 /* PrintTicketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1DDF144A2A744CAF00811466 /* PrintTicket */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DDF145F2A744CB100811466 /* Build configuration list for PBXNativeTarget "PrintTicket" */;
@@ -146,6 +197,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					1D929B922A9527FA000DA7D2 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 1DDF144A2A744CAF00811466;
+					};
 					1DDF144A2A744CAF00811466 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -165,11 +220,19 @@
 			projectRoot = "";
 			targets = (
 				1DDF144A2A744CAF00811466 /* PrintTicket */,
+				1D929B922A9527FA000DA7D2 /* PrintTicketTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1D929B912A9527FA000DA7D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DDF14492A744CAF00811466 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,12 +288,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1D929B8F2A9527FA000DA7D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D929B962A9527FA000DA7D2 /* PrintTicketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1DDF14472A744CAF00811466 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1DDF14532A744CAF00811466 /* ViewController.swift in Sources */,
 				1DDF144F2A744CAF00811466 /* AppDelegate.swift in Sources */,
+				1D929B9D2A952A38000DA7D2 /* TicketInteractor.swift in Sources */,
 				1DDF14512A744CAF00811466 /* SceneDelegate.swift in Sources */,
 				F2C344622A7B15E900A6CB2D /* ScannerViewController.swift in Sources */,
 				F2C344602A7B152D00A6CB2D /* Date.swift in Sources */,
@@ -241,6 +313,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D929B982A9527FA000DA7D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DDF144A2A744CAF00811466 /* PrintTicket */;
+			targetProxy = 1D929B972A9527FA000DA7D2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1DDF14542A744CAF00811466 /* Main.storyboard */ = {
@@ -262,6 +342,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1D929B992A9527FA000DA7D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 39M4SDFCNZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.nut.PrintTicketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrintTicket.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrintTicket";
+			};
+			name = Debug;
+		};
+		1D929B9A2A9527FA000DA7D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 39M4SDFCNZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.com.nut.PrintTicketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrintTicket.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrintTicket";
+			};
+			name = Release;
+		};
 		1DDF145D2A744CB100811466 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -441,6 +557,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1D929B9B2A9527FA000DA7D2 /* Build configuration list for PBXNativeTarget "PrintTicketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D929B992A9527FA000DA7D2 /* Debug */,
+				1D929B9A2A9527FA000DA7D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1DDF14462A744CAF00811466 /* Build configuration list for PBXProject "PrintTicket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

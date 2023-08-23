@@ -10,6 +10,7 @@ import Printer
 class ViewController: UIViewController {
     private let bluetoothPrinterManager = BluetoothPrinterManager()
     private let dummyPrinter = DummyPrinter()
+    private let interactor = TicketInteractor()
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -76,17 +77,7 @@ class ViewController: UIViewController {
         var hours = discountTimeLeft / 3600 % 24
         let minutes = (discountTimeLeft % 3600) / 60
         //let seconds = (discountTimeLeft % 3600) % 60
-        /// despues de los 15 min se cobra por minuto transcurrido
-        if minutes > 15 {
-            
-        } else {
-            return 0
-        }
-        
-        if minutes > 30 {
-            hours += 1
-        }
-        let amount = price * Double(hours)
+        let amount = interactor.generatePrice(minutes: minutes)
         return amount
     }
 }
