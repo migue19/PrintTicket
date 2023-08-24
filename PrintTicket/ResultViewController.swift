@@ -13,21 +13,43 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var daysLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
-    var amount: Double = 0.0
-    var dateInformation: DateInformation?
-    
+    var resultModel: ResultModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let currency = amount.currency {
-            textLabel.text = currency
-        } else {
-            textLabel.text = "No se obtuvo el monto"
-        }
-        if let dateInformation = dateInformation {
+        if let dateInformation = resultModel?.dateInformation {
             daysLabel.text = "\(dateInformation.days)"
             hoursLabel.text = "\(dateInformation.hours)"
             minutesLabel.text = "\(dateInformation.minutes)"
             secondsLabel.text = "\(dateInformation.seconds)"
+        }
+        validateInformation()
+    }
+    func validateInformation() {
+        guard let resultModel = resultModel else {
+            return
+        }
+        let dateInformation = resultModel.dateInformation
+        if dateInformation.days >= 1 {
+            alertWithDelay(message: "No puedes exceder mas de un Día")
+            return
+        }
+        if dateInformation.hours > 4 {
+            let price = resultModel.planType == .unlimited ? resultModel.priceInformation.unlimitedPriceDay : resultModel.priceInformation.limitedPriceDay
+            if let currency = price.currency {
+                textLabel.text = currency
+            } else {
+                textLabel.text = "No se obtuvo el monto"
+            }
+        }
+    }
+    func alert(message: String) {
+        let alert = UIAlertController(title: "Mensaje", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel))
+        self.present(alert, animated: true)
+    }
+    func alertWithDelay(message: String) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            self?.alert(message: message)
         }
     }
 }

@@ -9,8 +9,8 @@ import UIKit
 import Printer
 import NutUtils
 class ViewController: UIViewController {
-    let unlimitedPriceHour = 78.0
-    let limitedPriceHour = 54.0
+    var unlimitedPriceHour = 78.0
+    var limitedPriceHour = 54.0
     let unlimitedPriceDay = 349.0
     let limitedPriceDay = 216.0
     @IBOutlet weak var blockPriceSwitch: UISwitch!
@@ -106,11 +106,6 @@ class ViewController: UIViewController {
         let seconds = (discountTimeLeft % 3600) % 60
         return DateInformation(days: days, hours: hours, minutes: minutes, seconds: seconds)
     }
-    
-//    func getAmount(dateString: String) -> Double {
-//        let amount = interactor.generatePrice(hours: hours, minutes: minutes, price: price)
-//        return amount
-//    }
     func alertWithDelay(message: String) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [weak self] in
             self?.alert(message: message)
@@ -118,27 +113,34 @@ class ViewController: UIViewController {
     }
 }
 extension ViewController: ScannerDelegate {
-    func showResultView(amount: Double, dateInformation: DateInformation) {
+    func updatePrices(planType: PlanType) {
+        if !blockPriceSwitch.isOn {
+            let priceString = priceTxt.text
+            let price = priceString?.toDouble() ?? 0
+            if planType == .limited {
+                limitedPriceHour = price
+            } else {
+                unlimitedPriceHour = price
+            }
+        }
+    }
+    func showResultView(dateInformation: DateInformation) {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultView") as! ResultViewController
-        result.amount = amount
-        result.dateInformation = dateInformation
+        let planType: PlanType = planSwitch.isOn ? .unlimited : .limited
+        updatePrices(planType: planType)
+        let priceInformation = PriceInformation(unlimitedPriceDay: unlimitedPriceDay, limitedPriceDay: limitedPriceDay, unlimitedPriceHour: unlimitedPriceHour, limitedPriceHour: limitedPriceHour)
+        let resultModel = ResultModel(dateInformation: dateInformation, planType: planType, priceInformation: priceInformation)
+        result.resultModel = resultModel
         self.navigationController?.pushViewController(result, animated: true)
     }
     func sendCode(code: String) {
         //let code = "2023-08-02 16:43:34"
-        let code = "2023-08-24 05:00:34"
+        //let code = "2023-08-24 05:00:34"
         guard let dateInformation = getDateInformation(dateString: code) else {
             alertWithDelay(message: "El QR es invalido")
             return
         }
-        if dateInformation.days >= 1 {
-            alertWithDelay(message: "No puedes exceder mas de un Día")
-            return
-        }
-        if dateInformation.hours > 4 {
-            let price = planSwitch.isOn ? unlimitedPriceDay : limitedPriceDay
-            showResultView(amount: price, dateInformation: dateInformation)
-        }
+        showResultView(dateInformation: dateInformation)
     }
 }
 extension ViewController: UITextFieldDelegate {
@@ -149,10 +151,4 @@ extension ViewController: UITextFieldDelegate {
         let amount: Double = Double(textField.text ?? "0") ?? 0.0
         priceTxt.text = amount.currency
     }
-}
-struct DateInformation {
-    var days: Int
-    var hours: Int
-    var minutes: Int
-    var seconds: Int
 }

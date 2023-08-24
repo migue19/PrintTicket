@@ -19,6 +19,7 @@
 		F2A46A482A96868C003978E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2A46A472A96868C003978E0 /* GoogleService-Info.plist */; };
 		F2C344622A7B15E900A6CB2D /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C344612A7B15E900A6CB2D /* ScannerViewController.swift */; };
 		F2C344642A7B1D4B00A6CB2D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C344632A7B1D4B00A6CB2D /* ResultViewController.swift */; };
+		F2F4A93F2A97D2DA00F4697E /* TicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F4A93E2A97D2DA00F4697E /* TicketModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F2A46A472A96868C003978E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2C344612A7B15E900A6CB2D /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		F2C344632A7B1D4B00A6CB2D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		F2F4A93E2A97D2DA00F4697E /* TicketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				1DDF144E2A744CAF00811466 /* AppDelegate.swift */,
 				1DDF14502A744CAF00811466 /* SceneDelegate.swift */,
 				1DDF14522A744CAF00811466 /* ViewController.swift */,
+				F2F4A93E2A97D2DA00F4697E /* TicketModel.swift */,
 				1D929B9C2A952A38000DA7D2 /* TicketInteractor.swift */,
 				F2C344612A7B15E900A6CB2D /* ScannerViewController.swift */,
 				F2C344632A7B1D4B00A6CB2D /* ResultViewController.swift */,
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2F4A93F2A97D2DA00F4697E /* TicketModel.swift in Sources */,
 				1DDF14532A744CAF00811466 /* ViewController.swift in Sources */,
 				1DDF144F2A744CAF00811466 /* AppDelegate.swift in Sources */,
 				1D929B9D2A952A38000DA7D2 /* TicketInteractor.swift in Sources */,
