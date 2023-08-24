@@ -8,12 +8,12 @@
 import Foundation
 
 final class TicketInteractor {
-    ///Funcion que retorna el precio por tiempo
+    ///Función que retorna el precio por tiempo
     /// 1.- Primeros 15 minutos no se cobran
-    /// 2.- Apartir del minuto 16 se cobra por minuto
-    func generatePrice(minutes: Int) -> Double {
-        let price = 50.0
-        let pricePerMinute = price / 60
+    /// 2.- A partir del minuto 16 se cobra por minuto
+    /// 3.- Después de la hora 4 se cobra el dia
+    func generatePrice(hours: Int, minutes: Int, price: Double) -> Double {
+        let pricePerMinute = price / 60.0
         if minutes > 15 {
             return Double(minutes) * pricePerMinute
         } else {

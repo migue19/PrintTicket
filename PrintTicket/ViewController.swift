@@ -7,7 +7,12 @@
 
 import UIKit
 import Printer
+import NutUtils
 class ViewController: UIViewController {
+    let unlimitedPriceHour = 78.0
+    let limitedPriceHour = 54.0
+    let unlimitedPriceDay = 349.0
+    let limitedPriceDay = 216.0
     @IBOutlet weak var blockPriceSwitch: UISwitch!
     @IBOutlet weak var planSwitch: UISwitch!
     @IBOutlet weak var priceTxt: UITextField!
@@ -18,6 +23,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         changePrice()
         disablePrice()
+        priceTxt.delegate = self
+        hideKeyboardWhenTappedAround()
     }
     
     func disablePrice() {
@@ -25,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     func changePrice() {
-        priceTxt.text = planSwitch.isOn ? "78" : "54"
+        priceTxt.text = planSwitch.isOn ? unlimitedPriceHour.currency : limitedPriceHour.currency
     }
     
     @IBAction func printTicket(_ sender: Any) {
@@ -83,29 +90,69 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Aceptar", style: .cancel))
         self.present(alert, animated: true)
     }
-    func getAmount(dateString: String) -> Double {
+    
+    func getDateInformation(dateString: String) -> DateInformation? {
         guard let date = dateString.toDate() else {
-            return 0
+            return nil
         }
         let currencyDate = Date()
         let discountTime = currencyDate - date
         guard let discountTimeLeft = discountTime.second else {
-            return 0
+            return nil
         }
-        let price = 50.0
-        //let days = discountTimeLeft / 86400
-        var hours = discountTimeLeft / 3600 % 24
+        let days = discountTimeLeft / 86400
+        let hours = discountTimeLeft / 3600 % 24
         let minutes = (discountTimeLeft % 3600) / 60
-        //let seconds = (discountTimeLeft % 3600) % 60
-        let amount = interactor.generatePrice(minutes: minutes)
-        return amount
+        let seconds = (discountTimeLeft % 3600) % 60
+        return DateInformation(days: days, hours: hours, minutes: minutes, seconds: seconds)
+    }
+    
+//    func getAmount(dateString: String) -> Double {
+//        let amount = interactor.generatePrice(hours: hours, minutes: minutes, price: price)
+//        return amount
+//    }
+    func alertWithDelay(message: String) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [weak self] in
+            self?.alert(message: message)
+        }
     }
 }
 extension ViewController: ScannerDelegate {
-    func sendCode(code: String) {
+    func showResultView(amount: Double, dateInformation: DateInformation) {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultView") as! ResultViewController
-        let amount = getAmount(dateString: code)
         result.amount = amount
+        result.dateInformation = dateInformation
         self.navigationController?.pushViewController(result, animated: true)
     }
+    func sendCode(code: String) {
+        //let code = "2023-08-02 16:43:34"
+        let code = "2023-08-24 05:00:34"
+        guard let dateInformation = getDateInformation(dateString: code) else {
+            alertWithDelay(message: "El QR es invalido")
+            return
+        }
+        if dateInformation.days >= 1 {
+            alertWithDelay(message: "No puedes exceder mas de un Día")
+            return
+        }
+        if dateInformation.hours > 4 {
+            let price = planSwitch.isOn ? unlimitedPriceDay : limitedPriceDay
+            showResultView(amount: price, dateInformation: dateInformation)
+        }
+    }
+}
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        priceTxt.text = ""
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let amount: Double = Double(textField.text ?? "0") ?? 0.0
+        priceTxt.text = amount.currency
+    }
+}
+struct DateInformation {
+    var days: Int
+    var hours: Int
+    var minutes: Int
+    var seconds: Int
 }

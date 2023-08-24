@@ -17,11 +17,8 @@
 		1DDF145B2A744CB100811466 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DDF14592A744CB100811466 /* LaunchScreen.storyboard */; };
 		E1557BA1D96222124BBBECD6 /* Pods_PrintTicket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08C705047C174136AA1522C /* Pods_PrintTicket.framework */; };
 		F2A46A482A96868C003978E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2A46A472A96868C003978E0 /* GoogleService-Info.plist */; };
-		F2C344602A7B152D00A6CB2D /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C3445F2A7B152D00A6CB2D /* Date.swift */; };
 		F2C344622A7B15E900A6CB2D /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C344612A7B15E900A6CB2D /* ScannerViewController.swift */; };
 		F2C344642A7B1D4B00A6CB2D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C344632A7B1D4B00A6CB2D /* ResultViewController.swift */; };
-		F2C344662A7B284500A6CB2D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C344652A7B284500A6CB2D /* Double.swift */; };
-		F2C344682A7B2B7E00A6CB2D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C344672A7B2B7E00A6CB2D /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +47,8 @@
 		89C7F9A9FF9110755D885852 /* Pods-PrintTicket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrintTicket.debug.xcconfig"; path = "Target Support Files/Pods-PrintTicket/Pods-PrintTicket.debug.xcconfig"; sourceTree = "<group>"; };
 		D08C705047C174136AA1522C /* Pods_PrintTicket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrintTicket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2A46A472A96868C003978E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F2C3445F2A7B152D00A6CB2D /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		F2C344612A7B15E900A6CB2D /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		F2C344632A7B1D4B00A6CB2D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		F2C344652A7B284500A6CB2D /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
-		F2C344672A7B2B7E00A6CB2D /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +137,6 @@
 		F2C3445E2A7B151B00A6CB2D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F2C3445F2A7B152D00A6CB2D /* Date.swift */,
-				F2C344652A7B284500A6CB2D /* Double.swift */,
-				F2C344672A7B2B7E00A6CB2D /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -309,10 +300,7 @@
 				1D929B9D2A952A38000DA7D2 /* TicketInteractor.swift in Sources */,
 				1DDF14512A744CAF00811466 /* SceneDelegate.swift in Sources */,
 				F2C344622A7B15E900A6CB2D /* ScannerViewController.swift in Sources */,
-				F2C344602A7B152D00A6CB2D /* Date.swift in Sources */,
 				F2C344642A7B1D4B00A6CB2D /* ResultViewController.swift in Sources */,
-				F2C344682A7B2B7E00A6CB2D /* String.swift in Sources */,
-				F2C344662A7B284500A6CB2D /* Double.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

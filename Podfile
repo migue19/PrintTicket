@@ -9,5 +9,5 @@ target 'PrintTicket' do
   # For latest release in cocoapods
   pod 'Printer', :git => 'https://github.com/KevinGong2013/Printer.git', :branch => 'master'
   pod 'FirebaseCore', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :branch => 'master'
-
+  pod 'NutUtils', :path => '/Users/miguelmexicanoherrera/Documents/NutSystems/Frameworks/NutUtils'
 end
