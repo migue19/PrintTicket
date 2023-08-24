@@ -12,6 +12,7 @@ struct DateInformation {
     var hours: Int
     var minutes: Int
     var seconds: Int
+    var discountTime: (month: Int?, day: Int?, hour: Int?, minute: Int?, second: Int?)
 }
 struct PriceInformation {
     var unlimitedPriceDay: Double

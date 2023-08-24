@@ -8,6 +8,7 @@
 import UIKit
 import NutUtils
 class ResultViewController: UIViewController {
+    @IBOutlet weak var completeDayLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
@@ -33,9 +34,22 @@ class ResultViewController: UIViewController {
             alertWithDelay(message: "No puedes exceder mas de un Día")
             return
         }
-        if dateInformation.hours > 4 {
+        if dateInformation.hours >= 4 {
+            completeDayLabel.isHidden = false
             let price = resultModel.planType == .unlimited ? resultModel.priceInformation.unlimitedPriceDay : resultModel.priceInformation.limitedPriceDay
             if let currency = price.currency {
+                textLabel.text = currency
+            } else {
+                textLabel.text = "No se obtuvo el monto"
+            }
+        } else {
+            completeDayLabel.isHidden = true
+            let discountTime = resultModel.dateInformation.discountTime
+            let minutes = discountTime.minute ?? 0
+            let price = resultModel.planType == .unlimited ? resultModel.priceInformation.unlimitedPriceHour : resultModel.priceInformation.limitedPriceHour
+            let pricePerMinute = price / 60
+            let totalPrice = Double(minutes) * pricePerMinute
+            if let currency = totalPrice.currency {
                 textLabel.text = currency
             } else {
                 textLabel.text = "No se obtuvo el monto"

@@ -128,13 +128,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad por pagar:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne9-NH-0y3">
-                                <rect key="frame" x="76.666666666666686" y="313.33333333333331" width="240" height="31.333333333333314"/>
+                                <rect key="frame" x="76.666666666666686" y="287" width="240" height="31.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqb-sH-nBv">
-                                <rect key="frame" x="163" y="384.66666666666669" width="67.333333333333314" height="61"/>
+                                <rect key="frame" x="163" y="358.33333333333331" width="67.333333333333314" height="61"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="51"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -212,10 +212,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz2-rU-HuT">
-                                <rect key="frame" x="109.33333333333333" y="220.66666666666666" width="174.33333333333337" height="52.666666666666657"/>
-                                <string key="text">Se paga el precio
-por Dia</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se paga Dia completo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz2-rU-HuT">
+                                <rect key="frame" x="85.666666666666686" y="220.66666666666666" width="222" height="26.333333333333343"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
@@ -235,6 +233,7 @@ por Dia</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="completeDayLabel" destination="Uz2-rU-HuT" id="mFW-cN-Xic"/>
                         <outlet property="daysLabel" destination="7eo-tW-q4H" id="phN-5y-jAW"/>
                         <outlet property="hoursLabel" destination="BWM-bu-OAa" id="LlW-ZN-VP3"/>
                         <outlet property="minutesLabel" destination="XhG-hs-vVq" id="z4T-4j-XkD"/>
