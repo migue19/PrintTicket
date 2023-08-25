@@ -104,7 +104,7 @@ class ViewController: UIViewController {
         let hours = discountTimeLeft / 3600 % 24
         let minutes = (discountTimeLeft % 3600) / 60
         let seconds = (discountTimeLeft % 3600) % 60
-        return DateInformation(days: days, hours: hours, minutes: minutes, seconds: seconds)
+        return DateInformation(days: days, hours: hours, minutes: minutes, seconds: seconds, discountTime: discountTime)
     }
     func alertWithDelay(message: String) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [weak self] in
