@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '15.0'
 
 target 'PrintTicket' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -9,5 +9,5 @@ target 'PrintTicket' do
   # For latest release in cocoapods
   pod 'Printer', :git => 'https://github.com/KevinGong2013/Printer.git', :branch => 'master'
   pod 'FirebaseCore', :git => 'https://github.com/firebase/firebase-ios-sdk.git', :branch => 'master'
-  pod 'NutUtils', :path => '/Users/miguelmexicanoherrera/Documents/NutSystems/Frameworks/NutUtils'
+  pod 'NutUtils', '1.1.4'
 end

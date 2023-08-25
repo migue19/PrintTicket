@@ -10,27 +10,26 @@ PODS:
   - GoogleUtilities/Logger (7.11.1):
     - GoogleUtilities/Environment
   - "GoogleUtilities/NSData+zlib (7.11.1)"
-  - NutUtils (1.1.3)
+  - NutUtils (1.1.4)
   - Printer (4.1.0)
   - PromisesObjC (2.2.0)
 
 DEPENDENCIES:
   - FirebaseCore (from `https://github.com/firebase/firebase-ios-sdk.git`, branch `master`)
-  - NutUtils (from `/Users/miguelmexicanoherrera/Documents/NutSystems/Frameworks/NutUtils`)
+  - NutUtils (= 1.1.4)
   - Printer (from `https://github.com/KevinGong2013/Printer.git`, branch `master`)
 
 SPEC REPOS:
   trunk:
     - FirebaseCoreInternal
     - GoogleUtilities
+    - NutUtils
     - PromisesObjC
 
 EXTERNAL SOURCES:
   FirebaseCore:
     :branch: master
     :git: https://github.com/firebase/firebase-ios-sdk.git
-  NutUtils:
-    :path: "/Users/miguelmexicanoherrera/Documents/NutSystems/Frameworks/NutUtils"
   Printer:
     :branch: master
     :git: https://github.com/KevinGong2013/Printer.git
@@ -47,10 +46,10 @@ SPEC CHECKSUMS:
   FirebaseCore: 2cec518b43635f96afe7ac3a9c513e47558abd2e
   FirebaseCoreInternal: 971029061d326000d65bfdc21f5502c75c8b0893
   GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
-  NutUtils: 53dc4e95a9df93ab68b367ee40d6cebae65d3a0b
+  NutUtils: f08b0d5d9ff7792d35fb98aa4a594aedba44f277
   Printer: c762f8704aaa80c2a793a5ebd6757db2c7428e5d
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
 
-PODFILE CHECKSUM: fba72d9c16680edd05a4b2e6517488c2db31b9af
+PODFILE CHECKSUM: 53de30befb7de966ef2bba18c560fd5ff30b806a
 
 COCOAPODS: 1.12.1
