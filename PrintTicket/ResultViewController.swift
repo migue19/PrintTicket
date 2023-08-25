@@ -31,6 +31,7 @@ class ResultViewController: UIViewController {
         }
         let dateInformation = resultModel.dateInformation
         if dateInformation.days >= 1 {
+            completeDayLabel.isHidden = true
             alertWithDelay(message: "No puedes exceder mas de un Día")
             return
         }
