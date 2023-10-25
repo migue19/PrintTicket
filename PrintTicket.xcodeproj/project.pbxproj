@@ -19,6 +19,7 @@
 		F2A46A482A96868C003978E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2A46A472A96868C003978E0 /* GoogleService-Info.plist */; };
 		F2C344622A7B15E900A6CB2D /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C344612A7B15E900A6CB2D /* ScannerViewController.swift */; };
 		F2C344642A7B1D4B00A6CB2D /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C344632A7B1D4B00A6CB2D /* ResultViewController.swift */; };
+		F2D0408D2AE9B7AD00F13C49 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D0408C2AE9B7AD00F13C49 /* Bundle.swift */; };
 		F2F4A93F2A97D2DA00F4697E /* TicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F4A93E2A97D2DA00F4697E /* TicketModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		F2A46A472A96868C003978E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2C344612A7B15E900A6CB2D /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		F2C344632A7B1D4B00A6CB2D /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		F2D0408C2AE9B7AD00F13C49 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		F2F4A93E2A97D2DA00F4697E /* TicketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 		F2C3445E2A7B151B00A6CB2D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F2D0408C2AE9B7AD00F13C49 /* Bundle.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2F4A93F2A97D2DA00F4697E /* TicketModel.swift in Sources */,
+				F2D0408D2AE9B7AD00F13C49 /* Bundle.swift in Sources */,
 				1DDF14532A744CAF00811466 /* ViewController.swift in Sources */,
 				1DDF144F2A744CAF00811466 /* AppDelegate.swift in Sources */,
 				1D929B9D2A952A38000DA7D2 /* TicketInteractor.swift in Sources */,
@@ -495,7 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = MC2W678MVZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrintTicket/Info.plist;
@@ -526,7 +530,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = MC2W678MVZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PrintTicket/Info.plist;

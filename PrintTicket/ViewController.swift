@@ -9,10 +9,12 @@ import UIKit
 import Printer
 import NutUtils
 class ViewController: UIViewController {
-    var unlimitedPriceHour = 78.0
+    @IBOutlet weak var unlimitedPriceHourLabel: UILabel!
+    var unlimitedPriceHour = 75.0
     var limitedPriceHour = 54.0
     let unlimitedPriceDay = 349.0
     let limitedPriceDay = 216.0
+    @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var blockPriceSwitch: UISwitch!
     @IBOutlet weak var planSwitch: UISwitch!
     @IBOutlet weak var priceTxt: UITextField!
@@ -25,6 +27,7 @@ class ViewController: UIViewController {
         disablePrice()
         priceTxt.delegate = self
         hideKeyboardWhenTappedAround()
+        versionLabel.text = getVersionString()
     }
     
     func disablePrice() {
@@ -34,7 +37,12 @@ class ViewController: UIViewController {
     func changePrice() {
         priceTxt.text = planSwitch.isOn ? unlimitedPriceHour.currency : limitedPriceHour.currency
     }
-    
+    func getVersionString() -> String {
+        let build = Bundle.main.buildVersionNumber ?? ""
+        let release = Bundle.main.releaseVersionNumber ?? ""
+        let version = "Version: " + release + "(\(build))"
+        return version
+    }
     @IBAction func printTicket(_ sender: Any) {
         guard let image = UIImage(named: "ic_logo") else {
             alert(message: "No se pudo cargar el logo")

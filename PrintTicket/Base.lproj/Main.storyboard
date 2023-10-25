@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0rm-Uk-W18">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0rm-Uk-W18">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -123,7 +123,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$78" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZg-fq-hV4">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZg-fq-hV4">
                                                         <rect key="frame" x="0.0" y="20.333333333333371" width="64.333333333333329" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -185,14 +185,22 @@
                                     <action selector="ScanQR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIh-mD-DDG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version: 1.0.0 (4)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5P-g9-YAL">
+                                <rect key="frame" x="16" y="757.66666666666663" width="361" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mqU-n8-xP7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4bd-Ze-Ppb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h5P-g9-YAL" secondAttribute="bottom" constant="40" id="6R1-Em-fhN"/>
                             <constraint firstItem="5w8-LB-3NA" firstAttribute="top" secondItem="we9-mk-yBq" secondAttribute="bottom" constant="30" id="A8n-dO-sZj"/>
                             <constraint firstItem="7qh-Zf-FhQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FKS-I7-zW8"/>
                             <constraint firstItem="we9-mk-yBq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QAS-Vq-Mhu"/>
+                            <constraint firstItem="h5P-g9-YAL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Tfh-GU-Uha"/>
                             <constraint firstItem="we9-mk-yBq" firstAttribute="top" secondItem="hwO-eI-v4X" secondAttribute="bottom" constant="8" id="UPL-G7-ksn"/>
                             <constraint firstItem="hwO-eI-v4X" firstAttribute="top" secondItem="mqU-n8-xP7" secondAttribute="bottom" constant="16" id="Wmq-7u-Xrr"/>
                             <constraint firstItem="uCF-ek-qmg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yza-5W-y8L"/>
@@ -203,6 +211,7 @@
                             <constraint firstItem="uCF-ek-qmg" firstAttribute="top" secondItem="LVM-Ta-88j" secondAttribute="bottom" constant="30" id="igD-4D-9QM"/>
                             <constraint firstItem="hwO-eI-v4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qah-3V-ofO"/>
                             <constraint firstItem="mqU-n8-xP7" firstAttribute="top" secondItem="uCF-ek-qmg" secondAttribute="bottom" constant="8" id="x31-me-lqc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h5P-g9-YAL" secondAttribute="trailing" constant="16" id="ylG-GU-f1L"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yvK-Vj-KdW"/>
@@ -210,6 +219,8 @@
                         <outlet property="blockPriceSwitch" destination="PMH-za-zl8" id="sZK-8b-0cZ"/>
                         <outlet property="planSwitch" destination="unB-bQ-3UA" id="cWw-es-cd2"/>
                         <outlet property="priceTxt" destination="ho9-2q-Y9c" id="8Eg-An-rN8"/>
+                        <outlet property="unlimitedPriceHourLabel" destination="RZg-fq-hV4" id="87W-O4-JeC"/>
+                        <outlet property="versionLabel" destination="h5P-g9-YAL" id="tDY-CZ-7Ru"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -366,7 +377,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
