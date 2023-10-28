@@ -15,10 +15,8 @@ struct DateInformation {
     var discountTime: (month: Int?, day: Int?, hour: Int?, minute: Int?, second: Int?)
 }
 struct PriceInformation {
-    var unlimitedPriceDay: Double
-    var limitedPriceDay: Double
-    var unlimitedPriceHour: Double
-    var limitedPriceHour: Double
+    var priceDay: Double
+    var priceHour: Double
 }
 enum PlanType {
     case limited

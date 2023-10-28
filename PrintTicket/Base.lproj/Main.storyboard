@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0rm-Uk-W18">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0rm-Uk-W18">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -217,9 +217,12 @@
                     <navigationItem key="navigationItem" id="yvK-Vj-KdW"/>
                     <connections>
                         <outlet property="blockPriceSwitch" destination="PMH-za-zl8" id="sZK-8b-0cZ"/>
+                        <outlet property="limitedPriceDayLabel" destination="NPk-aI-jvI" id="aKm-u2-YPW"/>
+                        <outlet property="limitedPriceHourLabel" destination="3iq-TQ-xdU" id="mUO-oK-IZY"/>
                         <outlet property="planSwitch" destination="unB-bQ-3UA" id="cWw-es-cd2"/>
                         <outlet property="priceTxt" destination="ho9-2q-Y9c" id="8Eg-An-rN8"/>
-                        <outlet property="unlimitedPriceHourLabel" destination="RZg-fq-hV4" id="87W-O4-JeC"/>
+                        <outlet property="unlimitedPriceDayLabel" destination="y1t-qK-NPo" id="CGy-7b-vOn"/>
+                        <outlet property="unlimitedPriceHourLabel" destination="RZg-fq-hV4" id="piK-2t-SJB"/>
                         <outlet property="versionLabel" destination="h5P-g9-YAL" id="tDY-CZ-7Ru"/>
                     </connections>
                 </viewController>
@@ -377,7 +380,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

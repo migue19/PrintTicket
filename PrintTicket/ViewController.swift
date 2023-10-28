@@ -9,6 +9,9 @@ import UIKit
 import Printer
 import NutUtils
 class ViewController: UIViewController {
+    @IBOutlet weak var limitedPriceDayLabel: UILabel!
+    @IBOutlet weak var limitedPriceHourLabel: UILabel!
+    @IBOutlet weak var unlimitedPriceDayLabel: UILabel!
     @IBOutlet weak var unlimitedPriceHourLabel: UILabel!
     var unlimitedPriceHour = 75.0
     var limitedPriceHour = 54.0
@@ -28,8 +31,14 @@ class ViewController: UIViewController {
         priceTxt.delegate = self
         hideKeyboardWhenTappedAround()
         versionLabel.text = getVersionString()
+        createView()
     }
-    
+    func createView() {
+        unlimitedPriceHourLabel.text = unlimitedPriceHour.currency ?? ""
+        unlimitedPriceDayLabel.text = unlimitedPriceDay.currency ?? ""
+        limitedPriceHourLabel.text = limitedPriceHour.currency ?? ""
+        limitedPriceDayLabel.text = limitedPriceDay.currency ?? ""
+    }
     func disablePrice() {
         priceTxt.isEnabled = !blockPriceSwitch.isOn
     }

@@ -8,6 +8,7 @@
 import UIKit
 import NutUtils
 class ResultViewController: UIViewController {
+    let tolerance: Int = 15
     @IBOutlet weak var completeDayLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var minutesLabel: UILabel!
@@ -29,7 +30,10 @@ class ResultViewController: UIViewController {
         guard let resultModel = resultModel else {
             return
         }
+        let planType = resultModel.planType
+        let priceInformation = resultModel.priceInformation
         let dateInformation = resultModel.dateInformation
+        let minutes = dateInformation.minutes
         if dateInformation.days >= 1 {
             completeDayLabel.isHidden = true
             alertWithDelay(message: "No puedes exceder mas de un Día")
@@ -37,7 +41,7 @@ class ResultViewController: UIViewController {
         }
         if dateInformation.hours >= 4 {
             completeDayLabel.isHidden = false
-            let price = resultModel.planType == .unlimited ? resultModel.priceInformation.unlimitedPriceDay : resultModel.priceInformation.limitedPriceDay
+            let price =
             if let currency = price.currency {
                 textLabel.text = currency
             } else {
@@ -45,16 +49,24 @@ class ResultViewController: UIViewController {
             }
         } else {
             completeDayLabel.isHidden = true
-            let discountTime = resultModel.dateInformation.discountTime
-            let minutes = discountTime.minute ?? 0
-            let price = resultModel.planType == .unlimited ? resultModel.priceInformation.unlimitedPriceHour : resultModel.priceInformation.limitedPriceHour
-            let pricePerMinute = price / 60
-            let totalPrice = Double(minutes) * pricePerMinute
-            if let currency = totalPrice.currency {
-                textLabel.text = currency
+            if minutes > tolerance {
+                if minutes > 60 {
+                    getAmount(minutes: minutes, planType: <#PlanType#>, price: <#Double#>)
+                }
+                
             } else {
-                textLabel.text = "No se obtuvo el monto"
+                textLabel.text = 0.currency ?? ""
             }
+        }
+    }
+    func getAmount(minutes: Int, planType: PlanType, price: Double) {
+        let price = planType == .unlimited ? resultModel.priceInformation.unlimitedPriceHour : resultModel.priceInformation.limitedPriceHour
+        let pricePerMinute = price / 60
+        let totalPrice = Double(minutes) * pricePerMinute
+        if let currency = totalPrice.currency {
+            textLabel.text = currency
+        } else {
+            textLabel.text = "No se obtuvo el monto"
         }
     }
     func alert(message: String) {

@@ -9,9 +9,10 @@ import XCTest
 @testable import PrintTicket
 final class PrintTicketTests: XCTestCase {
 
-    func testMoney() {
-        let expectedPrice = 75.0
-        let interactor = TicketInteractor()
+    func testPrintTicket() {
+        let date = Date().toString()
+        
+        
         //let price = interactor.generatePrice(minutes: 90)
         //XCTAssertEqual(price, expectedPrice)
     }
