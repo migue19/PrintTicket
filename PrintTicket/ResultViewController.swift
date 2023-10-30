@@ -8,7 +8,8 @@
 import UIKit
 import NutUtils
 class ResultViewController: UIViewController {
-    let tolerance: Int = 15
+    @IBOutlet weak var planTypeLabel: UILabel!
+    let tolerance: Int = 10
     @IBOutlet weak var completeDayLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var minutesLabel: UILabel!
@@ -18,22 +19,29 @@ class ResultViewController: UIViewController {
     var resultModel: ResultModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let dateInformation = resultModel?.dateInformation {
-            daysLabel.text = "\(dateInformation.days)"
-            hoursLabel.text = "\(dateInformation.hours)"
-            minutesLabel.text = "\(dateInformation.minutes)"
-            secondsLabel.text = "\(dateInformation.seconds)"
-        }
         validateInformation()
+    }
+    func titleInformation(resultModel: ResultModel) {
+        let planType = resultModel.planType
+        planTypeLabel.text = planType == .limited ? "LIMITADO" : "ILIMITADO"
+    }
+    func dateInformation(resultModel: ResultModel) {
+        let dateInformation = resultModel.dateInformation
+        daysLabel.text = "\(dateInformation.days)"
+        hoursLabel.text = "\(dateInformation.hours)"
+        minutesLabel.text = "\(dateInformation.minutes)"
+        secondsLabel.text = "\(dateInformation.seconds)"
     }
     func validateInformation() {
         guard let resultModel = resultModel else {
             return
         }
+        titleInformation(resultModel: resultModel)
+        dateInformation(resultModel: resultModel)
         let planType = resultModel.planType
         let priceInformation = resultModel.priceInformation
         let dateInformation = resultModel.dateInformation
-        let minutes = dateInformation.minutes
+        let minutes = dateInformation.discountTime.minute ?? 0
         if dateInformation.days >= 1 {
             completeDayLabel.isHidden = true
             alertWithDelay(message: "No puedes exceder mas de un Día")
@@ -54,11 +62,25 @@ class ResultViewController: UIViewController {
                 /// Calcular el precio en base a los minutos transcurridos
                 if minutes > 60 {
                     getAmount(minutes: minutes, planType: planType, price: priceInformation.priceHour)
+                } else {
+                    priceForType(type: .hour, priceInformation: priceInformation)
                 }
             } else {
-                textLabel.text = 0.currency ?? ""
+                priceForType(type: .zero, priceInformation: priceInformation)
             }
         }
+    }
+    func priceForType(type: PriceType,priceInformation: PriceInformation) {
+        var price: Double = 0
+        switch type {
+        case .day:
+            price = priceInformation.priceDay
+        case .hour:
+            price = priceInformation.priceHour
+        case .zero:
+            price = 0
+        }
+        textLabel.text = price.currency ?? ""
     }
     func getAmount(minutes: Int, planType: PlanType, price: Double) {
         let pricePerMinute = price / 60
@@ -79,4 +101,9 @@ class ResultViewController: UIViewController {
             self?.alert(message: message)
         }
     }
+}
+enum PriceType {
+    case day
+    case hour
+    case zero
 }

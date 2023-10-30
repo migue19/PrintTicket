@@ -112,7 +112,9 @@ class ViewController: UIViewController {
         guard let date = dateString.toDate() else {
             return nil
         }
-        let currencyDate = Date()
+        //let currencyDate = Date()
+        //let currencyDate = "2023-10-28 15:10:00".toDate() ?? Date()
+        let currencyDate = "2023-10-28 16:00:00".toDate() ?? Date()
         let discountTime = currencyDate - date
         guard let discountTimeLeft = discountTime.second else {
             return nil
