@@ -112,9 +112,8 @@ class ViewController: UIViewController {
         guard let date = dateString.toDate() else {
             return nil
         }
-        //let currencyDate = Date()
-        //let currencyDate = "2023-10-28 15:10:00".toDate() ?? Date()
-        let currencyDate = "2023-10-28 16:00:00".toDate() ?? Date()
+        let currencyDate = Date()
+        //let currencyDate = "2023-10-28 16:00:00".toDate() ?? Date()
         let discountTime = currencyDate - date
         guard let discountTimeLeft = discountTime.second else {
             return nil
@@ -162,8 +161,7 @@ extension ViewController: ScannerDelegate {
         }
     }
     func sendCode(code: String) {
-        let code = "2023-10-28 15:00:00"
-        //let code = "2023-08-24 05:00:34"
+        //let code = "2023-10-28 15:00:00"
         guard let dateInformation = getDateInformation(dateString: code) else {
             alertWithDelay(message: "El QR es invalido")
             return

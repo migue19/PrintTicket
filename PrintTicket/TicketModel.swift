@@ -27,3 +27,8 @@ struct ResultModel {
     var planType: PlanType
     var priceInformation: PriceInformation
 }
+enum PriceType {
+    case day
+    case hour
+    case zero
+}

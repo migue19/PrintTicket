@@ -42,20 +42,15 @@ class ResultViewController: UIViewController {
         let priceInformation = resultModel.priceInformation
         let dateInformation = resultModel.dateInformation
         let minutes = dateInformation.discountTime.minute ?? 0
-        if dateInformation.days >= 1 {
+        if minutes >= 1440 {
             completeDayLabel.isHidden = true
             alertWithDelay(message: "No puedes exceder mas de un Día")
             return
         }
-        /// Precio por dia
-        if dateInformation.hours >= 4 {
+        /// Si son mas de 4 horas se cobra el dia completo
+        if minutes > 240 {
             completeDayLabel.isHidden = false
-            let price = priceInformation.priceDay
-            if let currency = price.currency {
-                textLabel.text = currency
-            } else {
-                textLabel.text = "No se obtuvo el monto"
-            }
+            priceForType(type: .day, priceInformation: priceInformation)
         } else {
             completeDayLabel.isHidden = true
             if minutes > tolerance {
@@ -80,7 +75,7 @@ class ResultViewController: UIViewController {
         case .zero:
             price = 0
         }
-        textLabel.text = price.currency ?? ""
+        textLabel.text = price.currency ?? "No se obtuvo el monto"
     }
     func getAmount(minutes: Int, planType: PlanType, price: Double) {
         let pricePerMinute = price / 60
@@ -101,9 +96,4 @@ class ResultViewController: UIViewController {
             self?.alert(message: message)
         }
     }
-}
-enum PriceType {
-    case day
-    case hour
-    case zero
 }
