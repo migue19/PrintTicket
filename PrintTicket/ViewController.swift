@@ -145,13 +145,22 @@ extension ViewController: ScannerDelegate {
         let result = self.storyboard?.instantiateViewController(withIdentifier: "resultView") as! ResultViewController
         let planType: PlanType = planSwitch.isOn ? .unlimited : .limited
         updatePrices(planType: planType)
-        let priceInformation = PriceInformation(unlimitedPriceDay: unlimitedPriceDay, limitedPriceDay: limitedPriceDay, unlimitedPriceHour: unlimitedPriceHour, limitedPriceHour: limitedPriceHour)
+        let priceInformation = getPrice(planType: planType)
         let resultModel = ResultModel(dateInformation: dateInformation, planType: planType, priceInformation: priceInformation)
         result.resultModel = resultModel
         self.navigationController?.pushViewController(result, animated: true)
     }
+    
+    func getPrice(planType: PlanType) -> PriceInformation {
+        switch planType {
+        case .limited:
+            return PriceInformation(priceDay: limitedPriceDay, priceHour: limitedPriceHour)
+        case .unlimited:
+            return PriceInformation(priceDay: unlimitedPriceDay, priceHour: unlimitedPriceHour)
+        }
+    }
     func sendCode(code: String) {
-        //let code = "2023-08-02 16:43:34"
+        let code = "2023-10-28 15:00:00"
         //let code = "2023-08-24 05:00:34"
         guard let dateInformation = getDateInformation(dateString: code) else {
             alertWithDelay(message: "El QR es invalido")
